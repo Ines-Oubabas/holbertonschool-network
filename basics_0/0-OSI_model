@@ -1,2 +1,5 @@
-2
-2
+#!/usr/bin/env bash
+# Script pour répondre aux questions sur le modèle OSI
+
+echo "2"
+echo "2"
