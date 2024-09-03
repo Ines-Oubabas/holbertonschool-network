@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Ce script écoute sur le port 98 de localhost et affiche les messages reçus
+
+sudo nc -l 98
