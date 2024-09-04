@@ -1,4 +1,1 @@
-#!/usr/bin/env bash
-# Ce script affiche les ports en écoute avec le PID et le nom du programme associé
-
 sudo ss -tulnp
