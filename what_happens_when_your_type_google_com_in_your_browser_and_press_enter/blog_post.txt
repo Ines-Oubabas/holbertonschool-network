@@ -1,51 +1,66 @@
-What happens when you type https://www.google.com and press Enter?
+Voici le contenu réécrit pour un fichier texte normal :
 
-This document explains the series of technical steps that occur when you type a URL such as https://www.google.com into your browser and press Enter.
+---
 
-1. DNS Request
-When you type a URL like https://www.google.com, the first process that occurs is a DNS (Domain Name System) request. Your browser needs to translate the human-readable domain name into an IP address (e.g., 142.250.180.206).
+**What happens when you type `https://www.google.com` and press Enter?**
 
-//- How DNS works: The browser checks its DNS cache for previously resolved addresses. If it doesn’t find the address, it sends a request to a DNS resolver, which may communicate with other DNS servers to resolve the IP address of google.com.
+This document explains the series of technical steps that occur when you type a URL such as `https://www.google.com` into your browser and press Enter.
 
-2. TCP/IP
-After obtaining the IP address, the browser initiates a connection to Google’s server using the TCP/IP protocol. TCP ensures the data is delivered reliably, while IP handles the routing of the data packets.
+1. **DNS Request**
 
-//- TCP Handshake: The browser and server perform a three-way handshake:
- 1- The browser sends a TCP SYN (synchronize) packet.
- 2- The server responds with a SYN-ACK (acknowledge) packet.
- 3- The browser sends an ACK packet, establishing the connection.
+When you type a URL like `https://www.google.com`, the first process that occurs is a **DNS (Domain Name System) request**. Your browser needs to translate the human-readable domain name into an IP address (e.g., `142.250.180.206`).
 
-3. Firewall
-During the connection process, the firewall on your system or network checks the outgoing and incoming packets to ensure that they follow the security rules. The firewall protects against unauthorized access and blocks harmful data.
+- How DNS works: The browser checks its DNS cache for previously resolved addresses. If it doesn’t find the address, it sends a request to a DNS resolver, which may communicate with other DNS servers to resolve the IP address of `google.com`.
 
-4. HTTPS/SSL
-Since Google uses HTTPS, an encrypted protocol, the browser establishes a secure connection using SSL/TLS. This ensures that the communication between the browser and the server is encrypted, preventing third parties from intercepting or tampering with the data.
+2. **TCP/IP**
 
-//- SSL Handshake: The browser and server exchange SSL certificates and use asymmetric encryption to create a secure communication channel.
+After obtaining the IP address, the browser initiates a connection to Google’s server using the **TCP/IP protocol**. TCP ensures the data is delivered reliably, while IP handles the routing of the data packets.
 
-5. Load Balancer
-Google’s infrastructure is supported by a large network of servers distributed across the globe. A load balancer distributes your request to one of Google’s servers to optimize performance and reliability.
+- TCP Handshake: The browser and server perform a three-way handshake:
+  1. The browser sends a TCP SYN (synchronize) packet.
+  2. The server responds with a SYN-ACK (acknowledge) packet.
+  3. The browser sends an ACK packet, establishing the connection.
 
-//- The load balancer ensures that your request reaches the server that can respond the fastest, based on factors like server load and geographic proximity.
+3. **Firewall**
 
-6. Web Server
-Once the request reaches the Google server, it is handled by a web server such as Nginx or Apache. The web server is responsible for receiving HTTP(S) requests and delivering the appropriate resources back to your browser.
+During the connection process, the **firewall** on your system or network checks the outgoing and incoming packets to ensure that they follow the security rules. The firewall protects against unauthorized access and blocks harmful data.
 
-//- This could include static resources like HTML, CSS, JavaScript files, and images.
+4. **HTTPS/SSL**
 
-7. Application Server
-For dynamic content or backend logic, the web server communicates with an application server (such as Node.js, PHP, or Python). This server processes the business logic and may generate a personalized response.
+Since Google uses **HTTPS**, an encrypted protocol, the browser establishes a secure connection using **SSL/TLS**. This ensures that the communication between the browser and the server is encrypted, preventing third parties from intercepting or tampering with the data.
 
-//- For example, if you are logged into Google, the application server would ensure that the page is personalized with your account information.
+- SSL Handshake: The browser and server exchange SSL certificates and use asymmetric encryption to create a secure communication channel.
 
-8. Database
-If dynamic content is needed, such as search results or personalized data, the application server queries a database to retrieve the necessary information. Google’s backend might use databases like MySQL, PostgreSQL, or a NoSQL solution like Bigtable.
+5. **Load Balancer**
 
-//- The database stores and retrieves information in real-time, ensuring that the application server can present the right data to the user.
+Google’s infrastructure is supported by a large network of servers distributed across the globe. A **load balancer** distributes your request to one of Google’s servers to optimize performance and reliability.
 
-- Final Step: Rendering the Page
+- The load balancer ensures that your request reaches the server that can respond the fastest, based on factors like server load and geographic proximity.
+
+6. **Web Server**
+
+Once the request reaches the Google server, it is handled by a **web server** such as Nginx or Apache. The web server is responsible for receiving HTTP(S) requests and delivering the appropriate resources back to your browser.
+
+- This could include static resources like HTML, CSS, JavaScript files, and images.
+
+7. **Application Server**
+
+For dynamic content or backend logic, the web server communicates with an **application server** (such as Node.js, PHP, or Python). This server processes the business logic and may generate a personalized response.
+
+- For example, if you are logged into Google, the application server would ensure that the page is personalized with your account information.
+
+8. **Database**
+
+If dynamic content is needed, such as search results or personalized data, the application server queries a **database** to retrieve the necessary information. Google’s backend might use databases like MySQL, PostgreSQL, or a NoSQL solution like Bigtable.
+
+- The database stores and retrieves information in real-time, ensuring that the application server can present the right data to the user.
+
+**Final Step: Rendering the Page**
 
 After all these processes, the server sends an HTML page as a response to the browser. The browser then processes this HTML (along with CSS, JavaScript, and other resources) and renders the web page for you to interact with.
 
+---
+
 This entire process happens almost instantly, in fractions of a second, delivering a seamless browsing experience.
 
+---
